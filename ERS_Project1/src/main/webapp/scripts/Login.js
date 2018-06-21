@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("warning").setAttribute("hidden", true);
-    sendAjaxGet("http://localhost:8082/ERS_Project1/Warning", function (xhr) {
+    sendAjaxGet("http://ec2-18-216-99-144.us-east-2.compute.amazonaws.com:8080/ERS_Project1/Warning", function (xhr) {
         let info = JSON.parse(xhr.response);
         if (info.warning !== null) {
             document.getElementById("warning").removeAttribute("hidden");
